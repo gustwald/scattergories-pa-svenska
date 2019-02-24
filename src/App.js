@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import logo from './picz/scattergories.png';
 import './App.scss';
 import Countdown from 'react-countdown-now';
 import soundOn from './picz/on.svg';
 import soundOff from './picz/off.svg';
+import shuffle from './picz/shuffle.svg';
 import play from './picz/play.svg';
 import pause from './picz/pause.svg';
 
 import horn from './sounds/horn.wav';
 import clock from './sounds/clock.wav';
 import Lists from './Lists';
-
-const Completionist = () => <span>You are good to go!</span>;
+const Completionist = () => <span>Tiden ute!!</span>;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.startTimer = this.startTimer.bind(this);
     this.pause = this.pause.bind(this);
+    this.randomLetter = this.randomLetter.bind(this);
     this.state = {
       countdownDate: Date.now() + 90 * 1000,
       letter: '',
@@ -30,6 +30,7 @@ class App extends Component {
   componentDidMount() {
     this.randomLetter();
   }
+
   renderer = ({ minutes, seconds, completed }) => {
     if (completed) {
       return <Completionist />;
@@ -60,6 +61,7 @@ class App extends Component {
   reset() {
     window.location.reload();
   }
+
   complete() {
     this.setState({ isCountingDown: false, isDone: true });
   }
@@ -82,11 +84,14 @@ class App extends Component {
     this.setState({ letter });
   }
   render() {
+    console.log(this.state.countdownDate);
     const { letter, isCountingDown, isStarted, isDone, volume } = this.state;
     return (
       <div className="App">
+        <span className="newLetter" onClick={this.randomLetter}>
+          Ny bokstav <img src={shuffle} alt="new-letter" />
+        </span>
         <div className="wrapper">
-          {/* <img onClick={this.reset} src={logo} className="logo" alt="play" /> */}
           {isCountingDown && (
             <div className="sound">
               {volume && (
@@ -108,7 +113,9 @@ class App extends Component {
           {volume && isCountingDown && <audio autoPlay loop src={clock} />}
           {isDone && !isCountingDown && <audio autoPlay={true} src={horn} />}
           <div className="player">
-            <div className="letterWrapper"><h1 className="letter">{letter}</h1></div>
+            <div className="letterWrapper">
+              <h1 className="letter">{letter}</h1>
+            </div>
             <Countdown
               date={this.state.countdownDate}
               autoStart={false}
@@ -117,27 +124,23 @@ class App extends Component {
               onComplete={() => this.complete()}
             />
             <div className="buttons">
-            {!isStarted && (
-              <button className="button" onClick={this.startTimer}><img src={play} alt="play"/></button>
-            )}
-            {isStarted && (
-              // <input
-              //   type="button"
-              //   value={isCountingDown ? 'Pausa' : 'Fortsätt'}
-              //   onClick={isCountingDown ? this.pause : this.resumeTimer}
-              // />
-              <button
-                className="button"
-                type="button"
-                // value={isCountingDown ? 'Pausa' : 'Fortsätt'}
-                onClick={isCountingDown ? this.pause : this.resumeTimer}
-              >
-              <img src={isCountingDown ? pause : play} alt="pause"/>
-              </button>
-            )}
-            {isStarted && (
-              <input type="button" value={'Nollställ'} onClick={this.reset} />
-            )}
+              {!isStarted && (
+                <button className="button" onClick={this.startTimer}>
+                  <img src={play} alt="play" />
+                </button>
+              )}
+              {isStarted && (
+                <button
+                  className="button"
+                  type="button"
+                  onClick={isCountingDown ? this.pause : this.resumeTimer}
+                >
+                  <img src={isCountingDown ? pause : play} alt="pause" />
+                </button>
+              )}
+              {isStarted && (
+                <input type="button" value={'Nollställ'} onClick={this.reset} />
+              )}
             </div>
           </div>
           <Lists />

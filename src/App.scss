@@ -77,16 +77,33 @@ ul {
 .time {
     text-align: center;
     font-size: 120px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     min-height: 180px;
     min-width: 185px;
 }
 .letterWrapper {
+    position: relative;
     min-height: 100px;
+    width: 100%;
+    text-align: center;
     .letter {
         font-size: 120px;
+    }
+}
+.newLetter {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 10px;
+    img {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
     }
 }
 
