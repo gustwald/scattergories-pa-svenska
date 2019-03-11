@@ -36,7 +36,7 @@ class App extends Component {
       return <Completionist />;
     } else {
       return (
-        <span className="time">
+        <span className="">
           {minutes}:{seconds}
         </span>
       );
@@ -116,13 +116,16 @@ class App extends Component {
             <div className="letterWrapper">
               <h1 className="letter">{letter}</h1>
             </div>
-            <Countdown
+            <span className="time" style={{ display: isStarted ? 'block' : 'none'}}>
+                <Countdown
               date={this.state.countdownDate}
               autoStart={false}
               ref="countdown"
               renderer={this.renderer}
               onComplete={() => this.complete()}
-            />
+            /> 
+            </span> 
+            <span style={{ display: isStarted ? 'none' : 'block'}} className="time">1:30</span>
             <div className="buttons">
               {!isStarted && (
                 <button className="button" onClick={this.startTimer}>
