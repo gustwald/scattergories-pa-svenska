@@ -11,28 +11,34 @@ class Lists extends Component {
   }
   saveCurrentList(index) {
     if (window && typeof window !== 'undefined') {
-        window.localStorage.setItem('currentList', index);
+      window.localStorage.setItem('currentList', index);
     }
-   }
+  }
   render() {
-      console.log(data);
     const defaultTab = localStorage.getItem('currentList');
     return (
       <div className="lists">
-        {defaultTab && <Tabs defaultIndex={parseInt(defaultTab)} onSelect={index => this.saveCurrentList(index)}>
-          <TabList>
+        {defaultTab && (
+          <Tabs
+            defaultIndex={parseInt(defaultTab)}
+            onSelect={index => this.saveCurrentList(index)}
+          >
+            <TabList>
+              {data.map((d, i) => (
+                <Tab key={i} index={i + 1}>
+                  {i + 1}
+                </Tab>
+              ))}
+            </TabList>
             {data.map((d, i) => (
-              <Tab key={i} index={i + 1}>{i + 1}</Tab>
+              <TabPanel key={i}>
+                <div className="list">
+                  <List data={d.data} />
+                </div>
+              </TabPanel>
             ))}
-          </TabList>
-          {data.map((d, i) => (
-            <TabPanel key={i}>
-              <div className="list">
-                <List data={d.data} />
-              </div>
-            </TabPanel>
-          ))}
-        </Tabs>}
+          </Tabs>
+        )}
       </div>
     );
   }

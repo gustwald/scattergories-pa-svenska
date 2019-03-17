@@ -1,7 +1,7 @@
 import React from 'react';
 
 const List = ({ data }) => {
-    console.log(data, 'x');
+    console.log('inuti filhelvetet');
     return (
   <ul>
       {data.map((d, i) => (
