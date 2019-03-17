@@ -18,10 +18,10 @@ class Lists extends Component {
     const defaultTab = localStorage.getItem('currentList');
     return (
       <div className="lists">
-        {defaultTab && <Tabs defaultIndex={defaultTab} onSelect={index => this.saveCurrentList(index)}>
+        {defaultTab && <Tabs defaultIndex={parseInt(defaultTab)} onSelect={index => this.saveCurrentList(index)}>
           <TabList>
             {data.map((d, i) => (
-              <Tab key={i}>{i + 1}</Tab>
+              <Tab key={i} index={i + 1}>{i + 1}</Tab>
             ))}
           </TabList>
           {data.map((d, i) => (
