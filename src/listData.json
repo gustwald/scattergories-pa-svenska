@@ -6,12 +6,57 @@
     },
     {
         "data" : [
-            "Grönsaker", "Länder", "Saker man kastar bort", "Yrken", "Elektriska apparater", "Tecknade figurer", "Drycker", "Musikgrupper", "Varuhus- och butiksnamn", "Dagstidningar", "Träd", "Personliga egenskaper"
+            "Grönsaker", "Länder", "Saker en kastar bort", "Yrken", "Elektriska apparater", "Tecknade figurer", "Drycker", "Musikgrupper", "Varuhus- och butiksnamn", "Dagstidningar", "Träd", "Personliga egenskaper"
         ]
     },
     {
         "data" : [
-            "Klädesplagg", "Desserter", "Bildelar", "Vad man kan se på en karta", "Idrottsmän", "Runda ord", "Saker i ett kylskåp", "Djur på en bonngård", "Gatunamn", "Skådespelare", "Färger", "Verktyg"
+            "Klädesplagg", "Desserter", "Bildelar", "Vad en kan se på en karta", "Idrottsmän", "Runda ord", "Saker i ett kylskåp", "Djur på en bonngård", "Gatunamn", "Skådespelare", "Färger", "Verktyg"
+        ]
+    },
+    {
+        "data" : [
+            "Sporter", "Sångtitlar", "Kroppsdelar", "Hundraser", "Byggnadsmaterial", "Fåglar", "Flicknamn", "Transportmedel", "Saker i ett kök", "Bovar & bedragare", "Blommor", "Saker en byter"
+        ]
+    },
+    {
+        "data" : [
+            "Saker i trädgården", "Rätter på smörgåsbordet", "Presidenter & Premiärministrar", "Ämnen i skolan", "Skäl för sen ankomst", "Saker som hoppar och studsar", "Ting av plast", "TV-kändisar", "Ting i en park", "Städer i Europa", "Ädelstenar", "Musikinstrument"
+        ]
+    },
+    {
+        "data" : [
+            "Ting i ett sovrum", "varor i en tobaksaffär", "Bilar", "Örter & kryddor", "Dåliga vanor", "I en sminkväska", "Kändisar", "Ting i en bil", "kräldjur", "Parker", "Fritidsnöjen", "Vad en kan vara allergisk mot"
+        ]
+    },
+    {
+        "data" : [
+            "Påhittade figurer", "rätter på menyn", "tidningar", "huvudstäder", "godis", "saker i ett hotell", "kompositörer", "saker man glömmer", "saker i en resväska", "filmtitlar", "sportutrustning", "brott"
+        ]
+    },
+    {
+        "data" : [
+            "öknamn", "stjärnor och planeter", "pizzor", "radioprogram", "fiskar", "varelser med svans", "Saker och varelser med fläckar", "historiska personer", "vad en är rädd för", "saker på en båt", "Ting i detta rum", "boktitlar"
+        ]
+    },
+    {
+        "data" : [
+            "restauranger", "sångerskor", "frukter", "saker i medicinskåpet", "leksaker", "arbetsuppgifter i hushållet", "sjöar & hav", "författare", "saker på julbordet", "vapen", "runda saker", "saker i en järnhandel"
+        ]
+    },
+    {
+        "data" : [
+            "hjältar", "gåvor/presenter", "kvinnor i böcker", "danser", "svarta ting", "fordon", "platser i norrland", "saker i ett sjukhus", "kungligheter", "städer i usa", "saker i din plånbok", "artister"
+        ]
+    },
+    {
+        "data" : [
+            "ting förknippade med barn", "berömda kvartetter", "saker på skrivbordet", "semestermål", "sjukdomar", "ord förknippade med pengar", "husgeråd & nyttoprylar", "filmtitlar", "spel", "saker du bär på dig", "ölsorter", "saker på en cirkus"
+        ]
+    },
+    {
+        "data" : [
+            "berömda kvinnor", "mediciner", "ting av metall", "hobbies", "människor i uniform", "saker på matbordet", "djur", "språk", "namn som nämns i bibeln", "förbund & föreningar", "saker som växer", "företag"
         ]
     }
 ]

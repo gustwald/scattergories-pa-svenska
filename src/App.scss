@@ -75,6 +75,8 @@ ul {
 
 .time {
   text-align: center;
+  display: flex;
+  align-items: center;
   font-size: 120px;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -136,4 +138,8 @@ ul {
 .react-tabs__tab--selected {
   border-bottom: 1px solid black !important;
   font-weight: bold !important;
+}
+
+.react-tabs__tab-list {
+    min-width: 440px;
 }

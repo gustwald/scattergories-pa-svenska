@@ -84,7 +84,6 @@ class App extends Component {
     this.setState({ letter });
   }
   render() {
-    console.log(this.state.countdownDate);
     const { letter, isCountingDown, isStarted, isDone, volume } = this.state;
     return (
       <div className="App">
