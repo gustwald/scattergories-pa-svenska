@@ -9,7 +9,7 @@ import pause from './picz/pause.svg';
 
 import horn from './sounds/horn.wav';
 import clock from './sounds/clock.wav';
-// import Lists from './Lists';
+import Lists from './Lists';
 const Completionist = () => <span>Tiden ute!!</span>;
 
 class App extends Component {
@@ -145,7 +145,7 @@ class App extends Component {
               )}
             </div>
           </div>
-          {/* <Lists /> */}
+          <Lists />
         </div>
       </div>
     );
