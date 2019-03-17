@@ -15,6 +15,7 @@ class Lists extends Component {
     }
    }
   render() {
+      console.log(data);
     const defaultTab = localStorage.getItem('currentList');
     return (
       <div className="lists">
