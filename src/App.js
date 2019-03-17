@@ -145,7 +145,7 @@ class App extends Component {
               )}
             </div>
           </div>
-          <Lists />
+          {/* <Lists /> */}
         </div>
       </div>
     );
