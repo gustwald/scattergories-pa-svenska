@@ -18,7 +18,6 @@ class Lists extends Component {
     const defaultTab = localStorage.getItem('currentList');
     return (
       <div className="lists">
-        {defaultTab && (
           <Tabs
             defaultIndex={parseInt(defaultTab)}
             onSelect={index => this.saveCurrentList(index)}
@@ -38,7 +37,6 @@ class Lists extends Component {
               </TabPanel>
             ))}
           </Tabs>
-        )}
       </div>
     );
   }
